@@ -1,0 +1,27 @@
+@use 'Reset';
+@use 'Var';
+@use "Nav";
+@use "Mixin";
+
+
+.hero{
+
+    &Carrusel{
+        
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 100vh;
+
+        &Item{
+            min-width: 100%;
+            max-width: 100%;
+            height: 100%;
+            &Img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use 'Var';
+@use 'Mixin';
+
+.h{
+    background-color: Var.$color-blanco;
+    @include Mixin.crear-flex(space-between,center);
+    padding: 1rem 8rem;
+
+    &Bmoon{
+        background-color: Var.$color-blanco;
+        transition: background-color .2s ease;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: 50%;
+        &Img{
+            max-width: 100%;
+            width: 2rem;
+            object-fit: cover;
+            pointer-events: none;
+        }
+        &:hover{
+            background-color: Var.$color-morado
+        }
+    }
+    
+    &Logo{
+        max-width: 100%;
+        width: 5rem;
+    }
+    &Nav{
+        &Link{
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 2rem;
+            color: Var.$color-morado;
+
+            &:hover{
+                color: Var.$color-rosado;
+            }
+        }
+
+    }
+}
