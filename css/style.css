@@ -17,6 +17,7 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 /* Sections
@@ -437,14 +438,31 @@ template {
   }
 }
 @media (max-width: 480px) {
+  .h {
+    padding: 1rem 4rem;
+  }
   .hNav {
     width: 100%;
   }
+  .hMenu {
+    right: 4rem;
+  }
+}
+@media (max-width: 320px) {
+  .h {
+    padding: 1rem 2rem;
+  }
+  .hMenu {
+    right: 2rem;
+  }
 }
 
+.hero {
+  position: relative;
+}
 .heroCarrusel {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   height: 100vh;
 }
@@ -457,6 +475,39 @@ template {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.heroCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 8rem;
+}
+.heroContTitle {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+}
+.heroContParrafo {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .heroCont {
+    padding: 0 4rem;
+  }
+}
+@media (max-width: 320px) {
+  .heroCont {
+    padding: 0 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

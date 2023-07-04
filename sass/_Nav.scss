@@ -1,134 +1,142 @@
-@use 'Var';
-@use 'Mixin';
+@use "Var";
+@use "Mixin";
 
-.h{
-    position: relative;
+.h {
+  position: relative;
+  background-color: Var.$color-blanco;
+  @include Mixin.crear-flex(space-between, center);
+  padding: 1rem 8rem;
+
+  &Cont {
+    @include Mixin.crear-flex(center, center);
+    &Bmoon {
+      background-color: Var.$color-blanco;
+      transform: rotate(0);
+      margin-left: 1.5rem;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      &Img {
+        max-width: 100%;
+        width: 2rem;
+        object-fit: cover;
+        pointer-events: none;
+      }
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+    &Logo {
+      max-width: 100%;
+      width: 5rem;
+    }
+  }
+
+  &Nav {
+    &Link {
+      text-decoration: none;
+      margin-left: 2rem;
+      font-size: 2rem;
+      color: Var.$color-morado;
+
+      &:hover {
+        color: Var.$color-rosado;
+      }
+    }
+    &Close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      padding: 0.5rem;
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      background-color: Var.$color-morado;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+      &Img {
+        max-width: 100%;
+        width: 3rem;
+        object-fit: cover;
+        pointer-events: none;
+      }
+      &:hover {
+        background-color: Var.$color-rosado;
+      }
+    }
+  }
+
+  &Menu {
+    position: absolute;
+    right: 8rem;
+    cursor: pointer;
     background-color: Var.$color-blanco;
-    @include Mixin.crear-flex(space-between,center);
-    padding: 1rem 8rem;
-
-    &Cont{
-        @include Mixin.crear-flex(center,center);
-        &Bmoon{
-            background-color: Var.$color-blanco;
-            transform: rotate(0);
-            margin-left: 1.5rem;
-            transition: transform .2s ease;
-            cursor: pointer;
-            padding: .5rem;
-            border-radius: 50%;
-            &Img{
-                max-width: 100%;
-                width: 2rem;
-                object-fit: cover;
-                pointer-events: none;
-            }
-            &:hover{
-                transform: rotate(360deg);
-            }
-        }
-        &Logo{
-            max-width: 100%;
-            width: 5rem;
-        }
-
+    opacity: 0;
+    pointer-events: none;
+    &Img {
+      max-width: 100%;
+      width: 3rem;
+      object-fit: cover;
+      pointer-events: none;
     }
+  }
 
-    
-    &Nav{
-        
-        &Link{
-            text-decoration: none;
-            margin-left: 2rem;
-            font-size: 2rem;
-            color: Var.$color-morado;
-
-            &:hover{
-                color: Var.$color-rosado;
-            }
-        }
-        &Close{
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            padding: .5rem;
-            border-radius: 50%;
-            opacity: 0;
-            pointer-events: none; 
-            background-color: Var.$color-morado;
-            transition: background-color .2s ease;
-            cursor: pointer;
-            &Img{
-                max-width: 100%;
-                width: 3rem;
-                object-fit: cover;
-                pointer-events: none;
-            }
-            &:hover{
-                background-color: Var.$color-rosado;
-            }
-        }
-
+  @media (max-width: 768px) {
+    &Menu {
+      opacity: 1;
+      pointer-events: unset;
+      transform: rotate(0);
+      transition: transform 0.2s ease;
+      z-index: 50;
+      &:hover {
+        transform: rotate(360deg);
+      }
     }
+    &Nav {
+      position: fixed;
+      top: 0;
+      right: -100rem;
+      bottom: 0;
+      background-color: Var.$color-blanco;
+      width: 30rem;
+      @include Mixin.crear-flex(center, center);
+      flex-direction: column;
+      pointer-events: none;
+      transition: right 1s ease;
+      z-index: 80;
+      &Link {
+        margin-bottom: 3rem;
+      }
+      &Show {
+        pointer-events: unset;
+        right: 0;
+      }
+      &Close {
+        z-index: 70;
+        &Show {
+          opacity: 1;
+          pointer-events: unset;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 4rem;
+    &Nav {
+      width: 100%;
+    }
+    &Menu{
+      right: 4rem;
+    }
+  }
+
+  @media (max-width: 320px){
+    padding: 1rem 2rem;
 
     &Menu{
-        position: absolute;
-        right: 8rem;
-        cursor: pointer;
-        background-color: Var.$color-blanco;
-        opacity: 0;
-        pointer-events: none;
-        &Img{
-            max-width: 100%;
-            width: 3rem;
-            object-fit: cover;
-            pointer-events: none;
-        }
+      right: 2rem;
     }
-
-    @media (max-width: 768px) {
-        &Menu{
-            opacity: 1;
-            pointer-events: unset;
-            transform: rotate(0);
-            transition: transform .2s ease;
-            z-index: 50;
-            &:hover{
-                transform: rotate(360deg);
-            }
-        }
-        &Nav{
-            position: fixed;
-            top: 0;
-            right: -100rem;
-            bottom: 0;
-            background-color: Var.$color-blanco;
-            width: 30rem;
-            @include Mixin.crear-flex(center,center);
-            flex-direction: column;
-            pointer-events: none;
-            transition: right 1s ease;
-            z-index: 80;
-            &Link{
-                margin-bottom: 3rem;
-            }
-            &Show{
-                pointer-events: unset;
-                right: 0;
-            }
-            &Close{
-                z-index: 70;
-                &Show{
-                    opacity: 1;
-                    pointer-events: unset;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 480px){
-        &Nav{
-            width: 100%;
-        }
-    }
+  }
 }
