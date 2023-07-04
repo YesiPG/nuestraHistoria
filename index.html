@@ -10,16 +10,24 @@
   </head>
   <body>
     <header class="h">
-      <button class="hBmoon">
-        <img class="hBmoonImg" src="image/moon-stars-fill.svg" alt="moon.svg" />
-      </button>
-      <img class="hLogo" src="image/logo.png" alt="logo" />
+      <div class="hCont">
+        <img class="hContLogo" src="image/logo.png" alt="logo" />
+        <button class="hContBmoon">
+          <img class="hContBmoonImg" src="image/moon-stars-fill.svg" alt="moon.svg" />
+        </button>
+      </div>
       <nav class="hNav">
+        <button class="hNavClose">
+          <img class="hNavCloseImg" src="image/close.svg" alt="cerrar nav">
+        </button>
         <a class="hNavLink" href="#">Inicio</a>
         <a class="hNavLink" href="#">Fotos</a>
         <a class="hNavLink" href="#">Videos</a>
         <a class="hNavLink" href="#">Objetivos</a>
       </nav>
+      <button class="hMenu">
+        <img class="hMenuImg" src="image/list.svg" alt="menu nav">
+      </button>
     </header>
 
     <section class="hero">
@@ -61,5 +69,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Scripts -->
+    <script src="js/nav.js"></script>
   </body>
 </html>
