@@ -38,10 +38,10 @@
       text-decoration: none;
       margin-left: 2rem;
       font-size: 2rem;
-      color: Var.$color-morado;
+      color: Var.$color-naranja;
 
       &:hover {
-        color: Var.$color-rosado;
+        color: Var.$color-naranja-claro;
       }
     }
     &Close {
@@ -52,7 +52,7 @@
       border-radius: 50%;
       opacity: 0;
       pointer-events: none;
-      background-color: Var.$color-morado;
+      background-color: Var.$color-naranja;
       transition: background-color 0.2s ease;
       cursor: pointer;
       &Img {
@@ -62,7 +62,7 @@
         pointer-events: none;
       }
       &:hover {
-        background-color: Var.$color-rosado;
+        background-color: Var.$color-naranja-claro;
       }
     }
   }

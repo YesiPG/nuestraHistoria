@@ -356,10 +356,10 @@ template {
   text-decoration: none;
   margin-left: 2rem;
   font-size: 2rem;
-  color: #9c59ff;
+  color: #d62900;
 }
 .hNavLink:hover {
-  color: #f9adc7;
+  color: #ff9b55;
 }
 .hNavClose {
   position: absolute;
@@ -369,7 +369,7 @@ template {
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
-  background-color: #9c59ff;
+  background-color: #d62900;
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
@@ -380,7 +380,7 @@ template {
   pointer-events: none;
 }
 .hNavClose:hover {
-  background-color: #f9adc7;
+  background-color: #ff9b55;
 }
 .hMenu {
   position: absolute;
@@ -508,6 +508,39 @@ template {
   .heroCont {
     padding: 0 2rem;
   }
+}
+
+.antes {
+  padding: 5rem 8rem;
+}
+.antesTitle {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #d62900;
+}
+.antesTexto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.antesTextoParrafo {
+  margin: 1rem;
+  font-size: 1.8rem;
+}
+.antesTextoParrafo:nth-child(1) {
+  border-right: 1px solid #ff9b55;
+  padding-right: 1rem;
+}
+.antesTextoParrafo:nth-child(2) {
+  border-left: 1px solid #ff9b55;
+  padding-left: 1rem;
+}
+.antesTextoImg {
+  margin: 1rem;
+  max-width: 100%;
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
