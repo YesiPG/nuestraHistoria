@@ -66,6 +66,30 @@
     text-align: center;
     font-size: Var.$title-size2;
     color: Var.$color-naranja;
+    padding: 1rem;
+
+    animation-name: moverBorder;
+    animation-duration: 1.5s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+
+    @keyframes moverBorder {
+      0% {
+        border: none;
+      }
+      25% {
+        border-top: 1px solid Var.$color-naranja-claro;
+      }
+      50% {
+        border-left: 1px solid Var.$color-naranja-claro;
+      }
+      75% {
+        border-bottom: 1px solid Var.$color-naranja-claro;
+      }
+      100% {
+        border-right: 1px solid Var.$color-naranja-claro;
+      }
+    }
   }
   &Texto {
     @include Mixin.crear-flex(center, center);
@@ -75,12 +99,11 @@
 
       &:nth-child(1) {
         border-right: 1px solid Var.$color-naranja-claro;
-        padding-right: 1rem;
+        padding: 1rem;
       }
       &:nth-child(2) {
         border-left: 1px solid Var.$color-naranja-claro;
-        padding-left: 1rem;
-
+        padding: 1rem;
       }
     }
     &Img {
