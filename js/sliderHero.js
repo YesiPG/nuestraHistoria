@@ -5,7 +5,7 @@
   const carrusel =d.querySelector(".heroCarrusel");
 
   let intervalo = null;
-  let step = 1;
+  let step = 2;
   let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
 
   const empezar = ()=>{

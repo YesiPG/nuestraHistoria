@@ -518,27 +518,6 @@ template {
   font-size: 3.5rem;
   color: #d62900;
   padding: 1rem;
-  animation-name: moverBorder;
-  animation-duration: 1.5s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-}
-@keyframes moverBorder {
-  0% {
-    border: none;
-  }
-  25% {
-    border-top: 1px solid #ff9b55;
-  }
-  50% {
-    border-left: 1px solid #ff9b55;
-  }
-  75% {
-    border-bottom: 1px solid #ff9b55;
-  }
-  100% {
-    border-right: 1px solid #ff9b55;
-  }
 }
 .antesTexto {
   display: flex;
@@ -548,14 +527,8 @@ template {
 .antesTextoParrafo {
   margin: 1rem;
   font-size: 1.8rem;
-}
-.antesTextoParrafo:nth-child(1) {
-  border-right: 1px solid #ff9b55;
-  padding: 1rem;
-}
-.antesTextoParrafo:nth-child(2) {
-  border-left: 1px solid #ff9b55;
-  padding: 1rem;
+  border: 1px solid #ff9b55;
+  padding: 2rem;
 }
 .antesTextoImg {
   margin: 1rem;
@@ -563,6 +536,13 @@ template {
   width: 30rem;
   height: 30rem;
   object-fit: cover;
+}
+
+.cita1Img {
+  max-width: 100%;
+  width: 100%;
+  height: 10rem;
+  object-fit: fill;
 }
 
 /*# sourceMappingURL=style.css.map */
