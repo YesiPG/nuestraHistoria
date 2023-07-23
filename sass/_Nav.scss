@@ -3,140 +3,135 @@
 
 .h {
   position: relative;
-  background-color: Var.$color-blanco;
+  background-color: Var.$color-rosa-claro;
   @include Mixin.crear-flex(space-between, center);
   padding: 1rem 8rem;
+  z-index: 70;
 
   &Cont {
     @include Mixin.crear-flex(center, center);
-    &Bmoon {
-      background-color: Var.$color-blanco;
-      transform: rotate(0);
-      margin-left: 1.5rem;
-      transition: transform 0.2s ease;
-      cursor: pointer;
-      padding: 0.5rem;
-      border-radius: 50%;
-      &Img {
-        max-width: 100%;
-        width: 2rem;
-        object-fit: cover;
-        pointer-events: none;
-      }
-      &:hover {
-        transform: rotate(360deg);
-      }
-    }
     &Logo {
       max-width: 100%;
       width: 5rem;
+      object-fit: cover;
+    }
+    &Bmoon {
+      background-color: Var.$color-rosa-claro;
+      cursor: pointer;
+      margin-left: 1rem;
+      transform: rotate(0);
+      transition: transform 0.2s ease;
+      &Img {
+        pointer-events: none;
+        width: 2.3rem;
+      }
+
+      &:hover {
+        transform: rotate(360deg);
+      }
     }
   }
 
   &Nav {
     &Link {
-      text-decoration: none;
+      color: Var.$color-gris-oscuro;
+      font-size: Var.$parrafo-size;
       margin-left: 2rem;
-      font-size: 2rem;
-      color: Var.$color-naranja;
-
+      transition: color 0.2s ease-in;
       &:hover {
-        color: Var.$color-naranja-claro;
+        color: Var.$color-blanco;
       }
     }
     &Close {
+      cursor: pointer;
       position: absolute;
       top: 2rem;
       right: 2rem;
-      padding: 0.5rem;
-      border-radius: 50%;
+      background-color: Var.$color-rosa-claro;
+      transform: rotate(0);
+      transition: transform 0.2s ease;
       opacity: 0;
       pointer-events: none;
-      background-color: Var.$color-naranja;
-      transition: background-color 0.2s ease;
-      cursor: pointer;
-      &Img {
-        max-width: 100%;
-        width: 3rem;
-        object-fit: cover;
-        pointer-events: none;
-      }
+
       &:hover {
-        background-color: Var.$color-naranja-claro;
+        transform: rotate(360deg);
       }
+
+      &Img {
+        pointer-events: none;
+        width: 4rem;
+      }
+    }
+
+    @media (max-width: 815px){
+      @include Mixin.crear-flex(center,center);
+      flex-direction: column;
+      position: fixed;
+      padding: 1rem;
+      top: 0;
+      right: 0;
+      left: 20rem;
+      bottom: 30rem;
+      padding-top: 10rem;
+      background-color: Var.$color-rosa-claro;
+      z-index: 80;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .4s ease;
+
+      &Link{
+        margin-bottom: 2.5rem;
+      }
+
+      &Show{
+        opacity: 1;
+        pointer-events: unset;
+      }
+    }
+
+    @media (max-width: 576px){
+      left: 0;
     }
   }
 
   &Menu {
     position: absolute;
+    top: 1.5rem;
     right: 8rem;
+    background-color: Var.$color-rosa-claro;
     cursor: pointer;
-    background-color: Var.$color-blanco;
+    transform: rotate(0);
+    transition: transform 0.2s ease;
     opacity: 0;
     pointer-events: none;
-    &Img {
-      max-width: 100%;
-      width: 3rem;
-      object-fit: cover;
-      pointer-events: none;
-    }
-  }
 
-  @media (max-width: 768px) {
-    &Menu {
+    &:hover {
+      transform: rotate(360deg);
+    }
+
+    &Img {
+      pointer-events: none;
+      width: 4rem;
+    }
+
+    @media (max-width: 815px){
       opacity: 1;
       pointer-events: unset;
-      transform: rotate(0);
-      transition: transform 0.2s ease;
-      z-index: 50;
-      &:hover {
-        transform: rotate(360deg);
-      }
     }
-    &Nav {
-      position: fixed;
-      top: 0;
-      right: -100rem;
-      bottom: 0;
-      background-color: Var.$color-blanco;
-      width: 30rem;
-      @include Mixin.crear-flex(center, center);
-      flex-direction: column;
-      pointer-events: none;
-      transition: right 1s ease;
-      z-index: 80;
-      &Link {
-        margin-bottom: 3rem;
-      }
-      &Show {
-        pointer-events: unset;
-        right: 0;
-      }
-      &Close {
-        z-index: 70;
-        &Show {
-          opacity: 1;
-          pointer-events: unset;
-        }
-      }
-    }
-  }
 
-  @media (max-width: 480px) {
-    padding: 1rem 4rem;
-    &Nav {
-      width: 100%;
-    }
-    &Menu{
+    @media (max-width: 480px){
       right: 4rem;
     }
-  }
-
-  @media (max-width: 320px){
-    padding: 1rem 2rem;
-
-    &Menu{
+    @media (max-width: 320px){
       right: 2rem;
     }
   }
+
+  @media (max-width: 480px){
+    padding: 1rem 4rem;
+  }
+  @media (max-width: 320px){
+    padding: 1rem 2rem;
+  }
+
 }

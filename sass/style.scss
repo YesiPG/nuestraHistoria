@@ -3,3 +3,81 @@
 @use "Nav";
 @use "Mixin";
 
+.cont{
+
+  /* Animación de aparición */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+  #inicio{
+    .imgHero{
+      max-width: 100%;
+      width: 100%;
+      filter: grayscale(40%);
+      object-fit: cover;
+    }
+
+    .text{
+      position: absolute;
+      padding: 2rem 8rem;
+      top: 0rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include Mixin.crear-flex(center,center);
+      flex-direction: column;
+      z-index: 50;
+
+      &Title{
+        color: Var.$color-dorado;
+        font-size: Var.$title-size;
+        background-color: rgba($color: #000000, $alpha: .6);
+        padding: 1rem 2rem;
+        text-align: center;
+      }
+
+      &Parrafo{
+        color: Var.$color-blanco;
+        font-size: Var.$parrafo-size;
+        background-color: rgba($color: #000000, $alpha: .6);
+        padding: 1rem 2rem;
+      }
+
+      @media (max-width: 768px){
+        &Title{
+          font-size: Var.$title-size2;
+        }
+        &Parrafo{
+          font-size: Var.$parrafo-size2;
+        }
+      }
+    
+      @media (max-width: 480px){
+        padding: 2rem 4rem;
+      }
+
+      @media (max-width: 320px){
+        padding: 2rem 2rem;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -8,13 +8,13 @@
     d.addEventListener("click",(e)=>{
         if(e.target.matches(".hMenu")){
             contNav.classList.add("hNavShow");
-            btnClose.classList.add("hNavCloseShow");
+            btnClose.classList.add("hNavShow");
         }
 
         if(e.target.matches(".hNavClose")){
             
             contNav.classList.remove("hNavShow");
-            btnClose.classList.remove("hNavCloseShow");
+            btnClose.classList.remove("hNavShow");
         }
     })
 })();
