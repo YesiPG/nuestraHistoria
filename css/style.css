@@ -320,7 +320,7 @@ template {
 
 .h {
   position: relative;
-  background-color: #F9D9E3;
+  background-color: #9e5c71;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -338,7 +338,7 @@ template {
   object-fit: cover;
 }
 .hContBmoon {
-  background-color: #F9D9E3;
+  background-color: #9e5c71;
   cursor: pointer;
   margin-left: 1rem;
   transform: rotate(0);
@@ -358,14 +358,14 @@ template {
   transition: color 0.2s ease-in;
 }
 .hNavLink:hover {
-  color: #ffffff;
+  color: #fdfbfb;
 }
 .hNavClose {
   cursor: pointer;
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background-color: #F9D9E3;
+  background-color: #9e5c71;
   transform: rotate(0);
   transition: transform 0.2s ease;
   opacity: 0;
@@ -391,7 +391,7 @@ template {
     left: 20rem;
     bottom: 30rem;
     padding-top: 10rem;
-    background-color: #F9D9E3;
+    background-color: #9e5c71;
     z-index: 80;
     opacity: 0;
     pointer-events: none;
@@ -414,7 +414,7 @@ template {
   position: absolute;
   top: 1.5rem;
   right: 8rem;
-  background-color: #F9D9E3;
+  background-color: #9e5c71;
   cursor: pointer;
   transform: rotate(0);
   transition: transform 0.2s ease;
@@ -494,7 +494,7 @@ template {
   text-align: center;
 }
 .cont #inicio .textParrafo {
-  color: #ffffff;
+  color: #fdfbfb;
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem 2rem;
@@ -516,6 +516,57 @@ template {
   .cont #inicio .text {
     padding: 2rem 2rem;
   }
+}
+.cont #sobreNosotros {
+  padding: 2rem 8rem;
+}
+.cont #sobreNosotros .snTitle {
+  color: #D4AF37;
+  font-size: 3.5rem;
+  text-align: center;
+  border-bottom: 1px solid #D4AF37;
+  padding-bottom: 1rem;
+}
+.cont #sobreNosotros .snTitle2 {
+  font-size: 2.5rem;
+  color: #D4AF37;
+}
+.cont #sobreNosotros p {
+  font-size: 2rem;
+  color: #333333;
+}
+@media (max-width: 480px) {
+  .cont #sobreNosotros {
+    padding: 2rem 4rem;
+  }
+}
+@media (max-width: 320px) {
+  .cont #sobreNosotros {
+    padding: 2rem 2rem;
+  }
+}
+.cont #momentosEspeciales .msTitle {
+  color: #D4AF37;
+  font-size: 3.5rem;
+}
+.cont #momentosEspeciales p {
+  color: #333333;
+  font-size: 2rem;
+}
+.cont #momentosEspeciales .galeria {
+  display: flex;
+  overflow-x: scroll;
+}
+.cont #momentosEspeciales .galeria .carrusel {
+  min-width: 40rem;
+  max-width: 40rem;
+  height: 40rem;
+}
+.cont #momentosEspeciales .galeria .carruselImg {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

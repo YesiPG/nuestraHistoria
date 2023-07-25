@@ -70,8 +70,66 @@
     }
   }
 
+  #sobreNosotros{
 
+    padding: 2rem 8rem;
 
+    .snTitle{
+      color: Var.$color-dorado;
+      font-size: 3.5rem;
+      text-align: center;
+      border-bottom: 1px solid Var.$color-dorado;
+      padding-bottom: 1rem;
+    }
+
+    .snTitle2{
+      font-size: 2.5rem;
+      color: Var.$color-dorado;
+    }
+
+    p{
+      font-size: 2rem;
+      color: Var.$color-gris-oscuro;
+    }
+
+    @media (max-width: 480px){
+      padding: 2rem 4rem;
+    }
+
+    @media (max-width: 320px){
+      padding: 2rem 2rem;
+    }
+  }
+
+  #momentosEspeciales{
+    .msTitle{
+      color: Var.$color-dorado;
+      font-size: 3.5rem;
+    }
+
+    p{
+      color: Var.$color-gris-oscuro;
+      font-size: 2rem;
+    }
+
+    .galeria{
+      
+      display: flex; 
+      overflow-x: scroll;
+
+      .carrusel{
+          min-width: 40rem;
+          max-width: 40rem;
+          height: 40rem;
+        &Img{
+          max-width: 100%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 
 
 

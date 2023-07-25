@@ -2,7 +2,7 @@
   "use strict";
 
   const d = document;
-  const carrusel =d.querySelector(".heroCarrusel");
+  const carrusel =d.querySelector(".carrusel");
 
   let intervalo = null;
   let step = 2;
