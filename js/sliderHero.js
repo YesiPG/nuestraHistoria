@@ -2,10 +2,10 @@
   "use strict";
 
   const d = document;
-  const carrusel =d.querySelector(".carrusel");
+  const carrusel =d.querySelector(".galeria");
 
   let intervalo = null;
-  let step = 2;
+  let step = 1;
   let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
 
   const empezar = ()=>{
@@ -18,6 +18,17 @@
         }
     },10);
   }
+
+  const stop = ()=>{
+    clearInterval(intervalo);
+  }
+
+  carrusel.addEventListener("mouseover",(e)=>{
+    stop();
+  })
+  carrusel.addEventListener("mouseout",(e)=>{
+    empezar();
+  })
 
   empezar();
 
