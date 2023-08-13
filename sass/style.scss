@@ -3,78 +3,98 @@
 @use "Nav";
 @use "Mixin";
 
-.cont{
-
+.cont {
   /* Animación de aparición */
-.fade-in {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1s ease, transform 2s ease;
-}
+  .fade-in {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 2s ease;
+  }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-  
-  #inicio{
-    .imgHero{
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #inicio {
+    .imgHero {
       max-width: 100%;
       width: 100%;
       filter: grayscale(40%);
       object-fit: cover;
     }
 
-    .text{
+    .text {
       position: absolute;
       padding: 2rem 8rem;
       top: 0rem;
       left: 0;
       right: 0;
       bottom: 0;
-      @include Mixin.crear-flex(center,center);
+      @include Mixin.crear-flex(center, center);
       flex-direction: column;
       z-index: 50;
 
-      &Title{
+      &Title {
         color: Var.$color-dorado;
         font-size: Var.$title-size;
-        background-color: rgba($color: #000000, $alpha: .6);
+        background-color: rgba($color: #000000, $alpha: 0.6);
         padding: 1rem 2rem;
         text-align: center;
       }
 
-      &Parrafo{
+      &Parrafo {
         color: Var.$color-blanco;
         font-size: Var.$parrafo-size;
-        background-color: rgba($color: #000000, $alpha: .6);
+        background-color: rgba($color: #000000, $alpha: 0.6);
         padding: 1rem 2rem;
       }
 
-      @media (max-width: 768px){
-        &Title{
+      @media (max-width: 768px) {
+        &Title {
           font-size: Var.$title-size2;
         }
-        &Parrafo{
+        &Parrafo {
           font-size: Var.$parrafo-size2;
         }
       }
-    
-      @media (max-width: 480px){
+
+      @media (max-width: 576px) {
         padding: 2rem 4rem;
+        &Parrafo{
+          height: 10rem;
+          overflow-y: scroll;
+        }
       }
 
-      @media (max-width: 320px){
+      @media (max-width: 480px){
+        &Title{
+          font-size: 3rem;
+        }
+
+        &Parrafo{
+          height: 7rem;
+        }
+      }
+
+      @media (max-width: 320px) {
         padding: 2rem 2rem;
+
+        &Title{
+          font-size: 2.8rem;
+        }
+
+        &Parrafo{
+          height: 7rem;
+        }
       }
     }
   }
 
-  #sobreNosotros{
-
+  #sobreNosotros {
     padding: 2rem 8rem;
 
-    .snTitle{
+    .snTitle {
       color: Var.$color-dorado;
       font-size: 3.5rem;
       text-align: center;
@@ -82,28 +102,28 @@
       padding-bottom: 1rem;
     }
 
-    .snTitle2{
+    .snTitle2 {
       font-size: 2.5rem;
       color: Var.$color-dorado;
     }
 
-    p{
+    p {
       font-size: 2rem;
       color: Var.$color-gris-oscuro;
     }
 
-    @media (max-width: 480px){
+    @media (max-width: 576px) {
       padding: 2rem 4rem;
     }
 
-    @media (max-width: 320px){
+    @media (max-width: 320px) {
       padding: 2rem 2rem;
     }
   }
 
-  #momentosEspeciales{
+  #momentosEspeciales {
     padding: 2rem 8rem;
-    .msTitle{
+    .msTitle {
       text-align: center;
       color: Var.$color-dorado;
       font-size: 3.5rem;
@@ -111,21 +131,22 @@
       border-bottom: 1px solid Var.$color-dorado;
     }
 
-    p{
+    p {
       color: Var.$color-gris-oscuro;
       font-size: 2rem;
+      margin-bottom: 6rem;
     }
 
-    .galeria{
-      
-      display: flex; 
-      overflow:hidden;
+    .galeria {
+      display: flex;
+      overflow: hidden;
 
-      .carrusel{
-          min-width: 40rem;
-          max-width: 40rem;
-          height: 40rem;
-        &Img{
+      .carrusel {
+        min-width: 40rem;
+        max-width: 40rem;
+        height: 40rem;
+        &Img {
+          // cursor: pointer;
           max-width: 100%;
           width: 100%;
           height: 100%;
@@ -133,24 +154,77 @@
           transform: scale(1);
           transition: transform 1s ease;
 
-          &:hover{
-            transform: scale(.9);
+          &:hover, .touchHover {
+            transform: scale(0.9);
           }
         }
       }
     }
 
-    .tarjetas{
-      
+   
+
+    .tarjetas {
+      padding-top: 8rem;
+      @include Mixin.crear-flex(center, center);
+      flex-wrap: wrap;
+
+      &Cont {
+        position: relative;
+        box-shadow: 4px 8px 10px rgba($color: #000000, $alpha: 0.6);
+        margin: .5rem;
+
+        &Img {
+          max-width: 100%;
+          width: 20rem;
+          height: 30rem;
+          object-fit: cover;
+          pointer-events: none;
+        }
+        &P {
+          text-align: center;
+          position: absolute;
+          top: -2rem;
+          left: 0;
+          right: 0;
+          bottom: -5.8rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba($color: #000, $alpha: 0.7);
+          color: Var.$color-dorado;
+          opacity: 0;
+          transition: opacity 1s ease;
+          // pointer-events: none;
+
+          &Show, .touchTarjetas{
+            opacity: 1;
+          }
+        }
+      }
+      @media (max-width: 576px){
+        &Cont{
+          &Img{
+            width: 30rem;
+            height: 45rem;
+          }
+        }
+      }
+      @media (max-width: 320px){
+        &Cont{
+          &Img{
+            width: 20rem;
+            height: 35rem;
+          }
+        }
+      }
     }
 
+    @media (max-width: 576px) {
+      padding: 2rem 4rem;
+    }
+
+    @media (max-width: 320px) {
+      padding: 2rem 2rem;
+    }
   }
-
-
-
-
-
-
-
-
 }
