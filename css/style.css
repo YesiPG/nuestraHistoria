@@ -391,6 +391,7 @@ template {
     left: 20rem;
     bottom: 30rem;
     padding-top: 10rem;
+    padding-bottom: 2rem;
     background-color: #efc8d5;
     z-index: 80;
     opacity: 0;
@@ -453,6 +454,34 @@ template {
   .h {
     padding: 1rem 2rem;
   }
+}
+
+.icon {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+.iconShow {
+  opacity: 1;
+  pointer-events: unset;
+}
+.iconMode, .iconArrow {
+  cursor: pointer;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #D4AF37;
+}
+.iconImg {
+  max-width: 100%;
+  width: 2.5rem;
+  pointer-events: none;
 }
 
 .cont {
@@ -654,6 +683,66 @@ template {
 }
 @media (max-width: 320px) {
   .cont #momentosEspeciales {
+    padding: 2rem 2rem;
+  }
+}
+.cont #nuestroFuturo {
+  padding: 2rem 8rem;
+}
+.cont #nuestroFuturo .title {
+  text-align: center;
+  color: #D4AF37;
+  font-size: 3.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D4AF37;
+}
+.cont #nuestroFuturo p {
+  color: #333333;
+  font-size: 2rem;
+  margin-bottom: 6rem;
+}
+.cont #nuestroFuturo .contimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #D4AF37;
+  padding-bottom: 4rem;
+}
+.cont #nuestroFuturo .contimg1 {
+  max-width: 100%;
+  width: 50rem;
+  object-fit: cover;
+  filter: grayscale(2);
+  margin: auto;
+}
+.cont #nuestroFuturo .texto {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-bottom: 1px solid #D4AF37;
+}
+.cont #nuestroFuturo .textoImg {
+  margin: auto;
+  max-width: 100%;
+  width: 40rem;
+  object-fit: cover;
+}
+@media (max-width: 856px) {
+  .cont #nuestroFuturo .texto {
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+  }
+}
+@media (max-width: 576px) {
+  .cont #nuestroFuturo {
+    padding: 2rem 4rem;
+  }
+}
+@media (max-width: 320px) {
+  .cont #nuestroFuturo {
     padding: 2rem 2rem;
   }
 }

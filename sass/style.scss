@@ -3,6 +3,37 @@
 @use "Nav";
 @use "Mixin";
 
+.icon{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+
+  &Show{
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  &Mode, &Arrow{
+    cursor: pointer;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: Var.$color-dorado;
+    
+  }
+  &Img{
+    max-width: 100%;
+    width: 2.5rem;
+    pointer-events: none;
+  }
+}
+
 .cont {
   /* Animación de aparición */
   .fade-in {
@@ -227,4 +258,63 @@
       padding: 2rem 2rem;
     }
   }
+
+  #nuestroFuturo{
+    padding: 2rem 8rem;
+    .title{
+      text-align: center;
+      color: Var.$color-dorado;
+      font-size: 3.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid Var.$color-dorado;
+    }
+    p {
+      color: Var.$color-gris-oscuro;
+      font-size: 2rem;
+      margin-bottom: 6rem;
+    }
+    .contimg{
+      @include Mixin.crear-flex(center,center);
+      border-bottom: 1px solid Var.$color-dorado;
+      padding-bottom: 4rem;
+
+      &1{
+        max-width: 100%;
+        width: 50rem;
+        object-fit: cover;
+        filter: grayscale(2);
+        margin: auto;
+      }
+      
+    }
+    .texto{
+      display: grid;
+      width: 100%;
+      grid-template-columns: 60% 40%;
+      grid-template-rows: 1fr;
+      margin-top: 4rem;
+      padding: 2rem;
+      border-bottom: 1px solid Var.$color-dorado;
+
+      &Img{
+        margin: auto;
+        max-width: 100%;
+        width: 40rem;
+        object-fit: cover;
+      }
+
+      @media (max-width: 856px){
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 40%;
+      }
+    }
+    @media (max-width: 576px) {
+      padding: 2rem 4rem;
+    }
+
+    @media (max-width: 320px) {
+      padding: 2rem 2rem;
+    }
+  }
+  
 }

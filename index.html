@@ -7,9 +7,10 @@
 
     <link rel="icon" href="image/logo.png" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="https://app.embed.im/snow.js"></script>
   </head>
-  <body>
-    <header class="h">
+  <body data-darkMode="fondo">
+    <header class="h" id="desplazar">
       <div class="hCont">
         <img class="hContLogo" src="image/logo.png" alt="logo" />
         <button class="hContBmoon">
@@ -33,6 +34,15 @@
         <img class="hMenuImg" src="image/list.svg" alt="menu nav" />
       </button>
     </header>
+
+    <div class="icon">
+      <button class="iconMode">
+        <img class="iconImg" src="image/moon-stars-fill.svg" alt="dark mode">
+      </button>
+      <a class="iconArrow" href="#desplazar">
+        <img class="iconImg" src="image/arrow-up.svg" alt="arrow up">
+      </a>
+    </div>
 
     <div class="cont">
       <section id="inicio" class="fade-in">
@@ -373,8 +383,26 @@
       </section>
 
       <section id="nuestroFuturo" class="fade-in">
-        <h2>Nuestro Futuro</h2>
+        <h2 class="title">Nuestro Futuro Juntas</h2>
+        <p> Nos sumergimos en los sueños, planes y esperanzas que compartimos para nuestro futuro. Cada día a tu lado nos ha inspirado a mirar hacia adelante con emoción, sabiendo que lo mejor está por venir. <br><br>
+          Imaginamos un camino lleno de aventuras y momentos memorables. Desde salir a cine mas seguido, comprar nuestras cosas para el hogar, ir de paseo, pasar mas tiempo de calidad juntas, hasta conseguir nuestra casa, montar nuestro negocio, viajar por el mundo, conseguir una finca en la que viviremos de viejitas, cada paso que damos juntos nos acerca más a las metas que nos hemos fijado. </p>
+        <div class="contimg">
+          <img class="contimg1" src="image/fotos de nosotras/51.jpeg" alt="boda">
+        </div>
+        <div class="texto">
+          <p>Nos vemos construyendo un hogar donde cada rincón refleje el amor y la felicidad que compartimos. Visualizamos días llenos de risas, noches tranquilas y la promesa de apoyarnos mutuamente en cada desafío que se presente. Nuestro futuro está entrelazado con la promesa de seguir creciendo como individuos y como pareja. Cada experiencia, tanto las alegres como las desafiantes, nos ayudará a evolucionar y fortalecer nuestro vínculo.</p>
+          <img class="textoImg" src="image/fotos de nosotras/53.jpg" alt="hogar">
+        </div>
+        <div class="texto">
+          <p>Queremos explorar el mundo juntos, descubriendo nuevos lugares y creando recuerdos en cada rincón del planeta. También deseamos cultivar nuestras pasiones, apoyándonos en cada logro y celebrando nuestras victorias compartidas. </p>
+          <img class="textoImg" src="image/fotos de nosotras/54.jpg" alt="avion">
+        </div>
+        <div class="texto">
+          <p>En el corazón de nuestro futuro siempre estás tú y yo, enfrentando lo desconocido con la certeza de que, sin importar lo que venga, lo enfrentaremos juntos. Cada día es una oportunidad para continuar escribiendo nuestra historia de amor, y esperamos que esta página web sea solo un primer capítulo de muchos más por venir.</p>
+          <img class="textoImg" src="image/fotos de nosotras/52.jpg" alt="finca">
+        </div>
       </section>
+
     </div>
 
     <!-- Scripts -->
@@ -382,5 +410,6 @@
     <script src="js/sliderSection.js"></script>
     <script src="js/sliderHero.js"></script>
     <script src="js/tarjetas.js"></script>
+    <script src="js/iconSlider.js"></script>
   </body>
 </html>
