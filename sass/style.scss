@@ -2,6 +2,7 @@
 @use "Var";
 @use "Nav";
 @use "Mixin";
+@use "Dark";
 
 .icon{
   position: fixed;
@@ -34,6 +35,8 @@
   }
 }
 
+
+
 .cont {
   /* Animación de aparición */
   .fade-in {
@@ -47,7 +50,7 @@
     transform: translateY(0);
   }
 
-  #inicio {
+  .inicio1 {
     .imgHero {
       max-width: 100%;
       width: 100%;
@@ -121,11 +124,10 @@
       }
     }
   }
-
-  #sobreNosotros {
+  .nosotros {
     padding: 2rem 8rem;
 
-    .snTitle {
+    &Title {
       color: Var.$color-dorado;
       font-size: 3.5rem;
       text-align: center;
@@ -133,12 +135,12 @@
       padding-bottom: 1rem;
     }
 
-    .snTitle2 {
+    &Title2 {
       font-size: 2.5rem;
       color: Var.$color-dorado;
     }
 
-    p {
+    &Parrafo {
       font-size: 2rem;
       color: Var.$color-gris-oscuro;
     }
@@ -152,7 +154,8 @@
     }
   }
 
-  #momentosEspeciales {
+
+  .momentosEspeciales1 {
     padding: 2rem 8rem;
     .msTitle {
       text-align: center;
@@ -259,7 +262,7 @@
     }
   }
 
-  #nuestroFuturo{
+  .nuestroFuturo1{
     padding: 2rem 8rem;
     .title{
       text-align: center;
@@ -315,6 +318,7 @@
     @media (max-width: 320px) {
       padding: 2rem 2rem;
     }
-  }
-  
+  } 
 }
+
+

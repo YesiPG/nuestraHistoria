@@ -456,6 +456,14 @@ template {
   }
 }
 
+.darkModeFondo {
+  background-color: #333333;
+}
+
+.darkModeParrafo {
+  color: #efc8d5 !important;
+}
+
 .icon {
   position: fixed;
   display: flex;
@@ -496,13 +504,13 @@ template {
   opacity: 1;
   transform: translateY(0);
 }
-.cont #inicio .imgHero {
+.cont .inicio1 .imgHero {
   max-width: 100%;
   width: 100%;
   filter: grayscale(40%);
   object-fit: cover;
 }
-.cont #inicio .text {
+.cont .inicio1 .text {
   position: absolute;
   padding: 2rem 8rem;
   top: 0rem;
@@ -515,108 +523,108 @@ template {
   flex-direction: column;
   z-index: 50;
 }
-.cont #inicio .textTitle {
+.cont .inicio1 .textTitle {
   color: #D4AF37;
   font-size: 5rem;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem 2rem;
   text-align: center;
 }
-.cont #inicio .textParrafo {
+.cont .inicio1 .textParrafo {
   color: #fdfbfb;
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem 2rem;
 }
 @media (max-width: 768px) {
-  .cont #inicio .textTitle {
+  .cont .inicio1 .textTitle {
     font-size: 3.5rem;
   }
-  .cont #inicio .textParrafo {
+  .cont .inicio1 .textParrafo {
     font-size: 1.8rem;
   }
 }
 @media (max-width: 576px) {
-  .cont #inicio .text {
+  .cont .inicio1 .text {
     padding: 2rem 4rem;
   }
-  .cont #inicio .textParrafo {
+  .cont .inicio1 .textParrafo {
     height: 10rem;
     overflow-y: scroll;
   }
 }
 @media (max-width: 480px) {
-  .cont #inicio .textTitle {
+  .cont .inicio1 .textTitle {
     font-size: 3rem;
   }
-  .cont #inicio .textParrafo {
+  .cont .inicio1 .textParrafo {
     height: 7rem;
   }
 }
 @media (max-width: 320px) {
-  .cont #inicio .text {
+  .cont .inicio1 .text {
     padding: 2rem 2rem;
   }
-  .cont #inicio .textTitle {
+  .cont .inicio1 .textTitle {
     font-size: 2.8rem;
   }
-  .cont #inicio .textParrafo {
+  .cont .inicio1 .textParrafo {
     height: 7rem;
   }
 }
-.cont #sobreNosotros {
+.cont .nosotros {
   padding: 2rem 8rem;
 }
-.cont #sobreNosotros .snTitle {
+.cont .nosotrosTitle {
   color: #D4AF37;
   font-size: 3.5rem;
   text-align: center;
   border-bottom: 1px solid #D4AF37;
   padding-bottom: 1rem;
 }
-.cont #sobreNosotros .snTitle2 {
+.cont .nosotrosTitle2 {
   font-size: 2.5rem;
   color: #D4AF37;
 }
-.cont #sobreNosotros p {
+.cont .nosotrosParrafo {
   font-size: 2rem;
   color: #333333;
 }
 @media (max-width: 576px) {
-  .cont #sobreNosotros {
+  .cont .nosotros {
     padding: 2rem 4rem;
   }
 }
 @media (max-width: 320px) {
-  .cont #sobreNosotros {
+  .cont .nosotros {
     padding: 2rem 2rem;
   }
 }
-.cont #momentosEspeciales {
+.cont .momentosEspeciales1 {
   padding: 2rem 8rem;
 }
-.cont #momentosEspeciales .msTitle {
+.cont .momentosEspeciales1 .msTitle {
   text-align: center;
   color: #D4AF37;
   font-size: 3.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #D4AF37;
 }
-.cont #momentosEspeciales p {
+.cont .momentosEspeciales1 p {
   color: #333333;
   font-size: 2rem;
   margin-bottom: 6rem;
 }
-.cont #momentosEspeciales .galeria {
+.cont .momentosEspeciales1 .galeria {
   display: flex;
   overflow: hidden;
 }
-.cont #momentosEspeciales .galeria .carrusel {
+.cont .momentosEspeciales1 .galeria .carrusel {
   min-width: 40rem;
   max-width: 40rem;
   height: 40rem;
 }
-.cont #momentosEspeciales .galeria .carruselImg {
+.cont .momentosEspeciales1 .galeria .carruselImg {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -624,29 +632,29 @@ template {
   transform: scale(1);
   transition: transform 1s ease;
 }
-.cont #momentosEspeciales .galeria .carruselImg:hover, .cont #momentosEspeciales .galeria .carruselImg .touchHover {
+.cont .momentosEspeciales1 .galeria .carruselImg:hover, .cont .momentosEspeciales1 .galeria .carruselImg .touchHover {
   transform: scale(0.9);
 }
-.cont #momentosEspeciales .tarjetas {
+.cont .momentosEspeciales1 .tarjetas {
   padding-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.cont #momentosEspeciales .tarjetasCont {
+.cont .momentosEspeciales1 .tarjetasCont {
   position: relative;
   box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.6);
   margin: 0.5rem;
 }
-.cont #momentosEspeciales .tarjetasContImg {
+.cont .momentosEspeciales1 .tarjetasContImg {
   max-width: 100%;
   width: 20rem;
   height: 30rem;
   object-fit: cover;
   pointer-events: none;
 }
-.cont #momentosEspeciales .tarjetasContP {
+.cont .momentosEspeciales1 .tarjetasContP {
   text-align: center;
   position: absolute;
   top: -2rem;
@@ -661,61 +669,61 @@ template {
   opacity: 0;
   transition: opacity 1s ease;
 }
-.cont #momentosEspeciales .tarjetasContPShow, .cont #momentosEspeciales .tarjetasContP .touchTarjetas {
+.cont .momentosEspeciales1 .tarjetasContPShow, .cont .momentosEspeciales1 .tarjetasContP .touchTarjetas {
   opacity: 1;
 }
 @media (max-width: 576px) {
-  .cont #momentosEspeciales .tarjetasContImg {
+  .cont .momentosEspeciales1 .tarjetasContImg {
     width: 30rem;
     height: 45rem;
   }
 }
 @media (max-width: 320px) {
-  .cont #momentosEspeciales .tarjetasContImg {
+  .cont .momentosEspeciales1 .tarjetasContImg {
     width: 20rem;
     height: 35rem;
   }
 }
 @media (max-width: 576px) {
-  .cont #momentosEspeciales {
+  .cont .momentosEspeciales1 {
     padding: 2rem 4rem;
   }
 }
 @media (max-width: 320px) {
-  .cont #momentosEspeciales {
+  .cont .momentosEspeciales1 {
     padding: 2rem 2rem;
   }
 }
-.cont #nuestroFuturo {
+.cont .nuestroFuturo1 {
   padding: 2rem 8rem;
 }
-.cont #nuestroFuturo .title {
+.cont .nuestroFuturo1 .title {
   text-align: center;
   color: #D4AF37;
   font-size: 3.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #D4AF37;
 }
-.cont #nuestroFuturo p {
+.cont .nuestroFuturo1 p {
   color: #333333;
   font-size: 2rem;
   margin-bottom: 6rem;
 }
-.cont #nuestroFuturo .contimg {
+.cont .nuestroFuturo1 .contimg {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #D4AF37;
   padding-bottom: 4rem;
 }
-.cont #nuestroFuturo .contimg1 {
+.cont .nuestroFuturo1 .contimg1 {
   max-width: 100%;
   width: 50rem;
   object-fit: cover;
   filter: grayscale(2);
   margin: auto;
 }
-.cont #nuestroFuturo .texto {
+.cont .nuestroFuturo1 .texto {
   display: grid;
   width: 100%;
   grid-template-columns: 60% 40%;
@@ -724,25 +732,25 @@ template {
   padding: 2rem;
   border-bottom: 1px solid #D4AF37;
 }
-.cont #nuestroFuturo .textoImg {
+.cont .nuestroFuturo1 .textoImg {
   margin: auto;
   max-width: 100%;
   width: 40rem;
   object-fit: cover;
 }
 @media (max-width: 856px) {
-  .cont #nuestroFuturo .texto {
+  .cont .nuestroFuturo1 .texto {
     grid-template-columns: 100%;
     grid-template-rows: 60% 40%;
   }
 }
 @media (max-width: 576px) {
-  .cont #nuestroFuturo {
+  .cont .nuestroFuturo1 {
     padding: 2rem 4rem;
   }
 }
 @media (max-width: 320px) {
-  .cont #nuestroFuturo {
+  .cont .nuestroFuturo1 {
     padding: 2rem 2rem;
   }
 }

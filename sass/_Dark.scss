@@ -1,0 +1,8 @@
+@use "Var";
+.darkModeFondo{
+    background-color: Var.$color-gris-oscuro;
+  }
+  
+  .darkModeParrafo{
+    color: Var.$color-rosa-claro !important;
+  }
