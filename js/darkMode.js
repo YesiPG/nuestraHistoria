@@ -6,30 +6,31 @@
 
   const fondoOscuro = d.querySelector("[data-darkModeFondo]");
   const darkParrafo = d.querySelectorAll("[data-darkModeParrafo]");
-  const btnDark = d.querySelectorAll(".hContBmoon");
-  const imgDark = d.querySelectorAll(".hContBmoonImg");
+  const btnDark = d.querySelector(".hContBmoon");
+  const imgDark = d.querySelector(".hContBmoonImg");
+  const btnDark2 = d.querySelector(".iconMode");
+  const imgDark2 = d.querySelector(".iconImg");
 
-  btnDark.forEach(i => i.addEventListener("click", (e)=>{
 
-    imgDark.forEach(l => {
-        if(l.getAttribute("src")=== "image/moon-stars-fill.svg") temaOscuro();
-        else temaClaro();
-    })
-
-  }))
-
-//   btnDark.addEventListener("click", (e) => {
-//     if (imgDark.getAttribute("src") === "image/moon-stars-fill.svg") temaOscuro();
-//     else temaClaro();
-//   });
+  btnDark.addEventListener("click", (e) => {
+    if (imgDark.getAttribute("src") === "image/moon-stars-fill.svg") temaOscuro();
+    else temaClaro();
+  });
+  btnDark2.addEventListener("click", (e) => {
+    if (imgDark2.getAttribute("src") === "image/moon-stars-fill.svg") temaOscuro();
+    else temaClaro();
+  });
 
   const temaOscuro = () => {
     console.log("hola1");
     fondoOscuro.classList.add("darkModeFondo");
     darkParrafo.forEach((i) => i.classList.add("darkModeParrafo"));
 
-    imgDark.forEach(i => i.removeAttribute("src"))
-    imgDark.forEach(i => i.setAttribute("src", "image/sun-fill.svg"))
+    imgDark.removeAttribute("src")
+    imgDark.setAttribute("src", "image/sun-fill.svg")
+
+    imgDark2.removeAttribute("src")
+    imgDark2.setAttribute("src", "image/sun-fill.svg")
 
     l.setItem("tema", "oscuro");
   };
@@ -39,8 +40,10 @@
 
     fondoOscuro.classList.remove("darkModeFondo");
     darkParrafo.forEach((i) => i.classList.remove("darkModeParrafo"));
-    imgDark.forEach(i => i.removeAttribute("src"))
-    imgDark.forEach(i => i.setAttribute("src", "image/moon-stars-fill.svg"))
+    imgDark.removeAttribute("src")
+    imgDark.setAttribute("src", "image/moon-stars-fill.svg")
+    imgDark2.removeAttribute("src")
+    imgDark2.setAttribute("src", "image/moon-stars-fill.svg")
 
     l.setItem("tema", "claro");
   };

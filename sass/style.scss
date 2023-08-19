@@ -51,22 +51,24 @@
   }
 
   .inicio1 {
+    background-color: #000;
     .imgHero {
       max-width: 100%;
       width: 100%;
+      height: 100vh;
       filter: grayscale(40%);
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .text {
+      @include Mixin.crear-flex(center, center);
+      flex-direction: column;
       position: absolute;
       padding: 2rem 8rem;
       top: 0rem;
       left: 0;
       right: 0;
-      bottom: 0;
-      @include Mixin.crear-flex(center, center);
-      flex-direction: column;
+      bottom: -7.1rem;
       z-index: 50;
 
       &Title {
@@ -319,6 +321,37 @@
       padding: 2rem 2rem;
     }
   } 
+
+  .fin {
+    padding: 8rem 8rem;
+    &Title{
+      font-size: 4rem;
+      color: Var.$color-dorado;
+      text-align: center;
+    }
+  }
+}
+
+.footer{
+  @include Mixin.crear-flex(center,center);
+  flex-direction: column;
+  background-color: #000;
+  padding: 8rem 2rem;
+  border-top: 1px solid Var.$color-dorado;
+  &Logo{
+    max-width: 100%;
+    width: 15rem;
+  }
+
+  &Parrafo{
+    color: Var.$color-blanco;
+    font-size: 2rem;
+  }
+
+  &Link{
+    color: Var.$color-dorado;
+    font-size: 1.6rem;
+  }
 }
 
 

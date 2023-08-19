@@ -504,23 +504,27 @@ template {
   opacity: 1;
   transform: translateY(0);
 }
+.cont .inicio1 {
+  background-color: #000;
+}
 .cont .inicio1 .imgHero {
   max-width: 100%;
   width: 100%;
+  height: 100vh;
   filter: grayscale(40%);
-  object-fit: cover;
+  object-fit: contain;
 }
 .cont .inicio1 .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   padding: 2rem 8rem;
   top: 0rem;
   left: 0;
   right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  bottom: -7.1rem;
   z-index: 50;
 }
 .cont .inicio1 .textTitle {
@@ -753,6 +757,36 @@ template {
   .cont .nuestroFuturo1 {
     padding: 2rem 2rem;
   }
+}
+.cont .fin {
+  padding: 8rem 8rem;
+}
+.cont .finTitle {
+  font-size: 4rem;
+  color: #D4AF37;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  padding: 8rem 2rem;
+  border-top: 1px solid #D4AF37;
+}
+.footerLogo {
+  max-width: 100%;
+  width: 15rem;
+}
+.footerParrafo {
+  color: #fdfbfb;
+  font-size: 2rem;
+}
+.footerLink {
+  color: #D4AF37;
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
